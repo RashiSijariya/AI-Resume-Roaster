@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Resume Roaster</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <!-- INPUT SCREEN -->
+  <div id="screen-input" class="screen active">
+    <div style="margin-bottom:1.5rem;">
+      <h1>🔥 AI Resume Roaster</h1>
+      <p style="font-size:15px; color:#666;">Paste your resume — get a brutally honest score and feedback in seconds.</p>
+    </div>
+    <textarea id="resume-input" placeholder="Paste your resume text here...
+
+Rashi Sijariya
+rashisijariya768@email.com | linkedin.com/in/rashi-sijariya-43b41628b
+
+Experience
+Software Engineer at XYZ Corp (2021–present)
+- Worked on various projects
+- Collaborated with teams
+..."></textarea>
+    <p class="err" id="input-err"></p>
+    <button class="roast-btn" onclick="roastResume()">🔥 Roast my resume!</button>
+  </div>
+
+  <!-- LOADING SCREEN -->
+  <div id="screen-loading" class="screen">
+    <div style="text-align:center; padding:3rem 1rem;">
+      <div style="font-size:48px; margin-bottom:1rem;"><span class="loading-pulse">🔥</span></div>
+      <p style="font-size:16px; font-weight:500;" id="loading-msg">Analyzing your resume...</p>
+      <p style="font-size:13px; color:#666; margin-top:6px;">Just 1 API call. Brutal results.</p>
+    </div>
+  </div>
+
+  <!-- RESULT SCREEN -->
+  <div id="screen-result" class="screen">
+    <div id="result-content"></div>
+    <button class="restart-btn" onclick="restart()">↺ Roast another resume</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
